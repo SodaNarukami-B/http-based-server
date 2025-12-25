@@ -3,17 +3,30 @@
 
 > Supports only Debian based systems
 
-## Feautures:
+## Features:
 - Object based router (GET & POST only)
 - Shell script for testing
 - Logs the network interfaces of server
 
+## Architecture:
+- POST & GET requests router
+- JSON validation
+- Buffer overflow protection
+- Logging interfaces
+
+```Text
+GET to / shows all data base
+POST to / creates new object
+```
+**Request to undefined route will refused with 404 code (Not found)**
+
 ## How to use:
 ### Open terminal and run:
 ```Shell
-sudo apt install node
+sudo apt install nodejs
 cd # Repo path
 node ./server.js
+# To stop server press Ctrl + C
 ```
 ## For test you can run special test file:
 ```Shell
